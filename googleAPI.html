@@ -26,22 +26,24 @@
             }
             
             function error(){
-                alert("That's weird!  We couldn't find you!");
+                alert("We couldn't find you!");
             }
             
-            function success(){
+            function success(position){
                 Geo.lat = position.coords.latitude;
                 Geo.lng = position.coords.longitude;
+                getWeather();
             }
             
             function getWeather(){
-                var key = "a49e7d7b794e6bf0";
-                var Weather = "http://api.wunderground.com/api/" + key + "/geolookup/q/" + Geo.lat + "," + Geo.lng + ".json";
+                var key = "c043d4759e8caed9";
+                var Weather = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + Geo.lat + "," + Geo.lng + ".json";
                 
                 $.ajax({
                     url : Weather,
                     dataType : "jsonp",
                     success : function(data){
+                        console.log(data);
                         var location = data['location']['city'];
                         var temp = data['current_observation']['temp_f'];
                         var img = data['current_observation']['icon_url'];
