@@ -1,0 +1,61 @@
+<html lang="en">
+    <head>
+        <title>Simple Weather API</title>
+        <link rel="stylesheet" href="css/weatherApp.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <div id="forecast">
+            <h1>Weather at <span id="location"></span></h1>
+            <div id="imgdiv">
+                <img id="img" src="" />
+            </div>
+            <p>It is currently <span id="temp"></span>F with <span id="desc"></span></p>
+            <p>Wind: <span id="wind"></span></p>
+        </div>
+    </body>
+    <script>
+       var Geo={};
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(success,error);
+            } else {
+                alert ("Geolocation is not supported");
+            }
+            
+            function error(){
+                alert("That's weird!  We couldn't find you!");
+            }
+            
+            function success(){
+                Geo.lat = position.coords.latitude;
+                Geo.lng = position.coords.longitude;
+            }
+            
+            function getWeather(){
+                var key = "a49e7d7b794e6bf0";
+                var Weather = "http://api.wunderground.com/api/" + key + "/geolookup/q/" + Geo.lat + "," + Geo.lng + ".json";
+                
+                $.ajax({
+                    url : Weather,
+                    dataType : "jsonp",
+                    success : function(data){
+                        var location = data['location']['city'];
+                        var temp = data['current_observation']['temp_f'];
+                        var img = data['current_observation']['icon_url'];
+                        var desc = data['current_observation']['weather'];
+                        var wind = data['current_observation']['wind_string'];
+                        
+                        $('#location').html(location);
+                        $('#temp').html(temp);
+                        $('desc').html(desc);
+                        $('#wind').html(wind);
+                        $('#img').attr('src', img);
+                    }
+                });
+                
+            }
+    </script>
+</html>

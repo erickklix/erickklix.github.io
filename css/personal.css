@@ -39,7 +39,7 @@ body{
 	background-repeat: no-repeat;
 }
 
-#message{
+#message, p, h1{
 	text-align: center;
 	color: white;
 	font-family: Helvetica, sans-serif;

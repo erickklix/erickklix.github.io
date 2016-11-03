@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="stylesheet" type="text/css" href="css/weatherApp.css"></link>
+    </head>
+    <body>
+        <section>
+            <h1 id="city">Weather App</h1>
+            <p><a id="temperature" href="#" onclick="switchUnits(); return false" title="Click to switch between metric and imperial units."><span id="weather">temperature</span></a></p>
+        </section>
+        <footer>
+            <p>Powered by <a href="http://flickr.com/services/api/">Flickr</a> and <a href="http://openweathermap.org">Openweathermap.org</a>. Created by <a href="https://twitter.com/fourtonfish">@fourtonfish</a>. <a id="image-source" href="#">Image source</a>.</p>
+</footer>
+        <script>
+            var weatherData = {
+                city: document.querySelector("#city"),
+                weather: document.querySelector("#weather"),
+                temperature: document.querySelector("#temperature"),
+                temperatureValue: 0,
+                units: "°C"
+            };
+            
+            function switchUnits() {
+                if(weatherData.units === "°C") {
+                    weatherData.temperatureValue =  Math.round(weatherData.temperatureValue * 9/5 + 32);
+                    weatherData.units = "°F";
+                } else {
+                    weatherData.temperatureValue = Math.round((weatherData.temperatureValue - 32) * 5/9);
+                    weatherData.units = "°C";
+                }
+                
+                weatherData.temperature.innerHTML = weatherData.temperatureValue + weatherData.units;
+            }
+            
+            function getLocationAndWeather() {
+                if(window.XMLHttpRequest) {
+                    var request = new XMLHttpRequest();
+                    request.addEventListener("load", function() {
+                        var response = JSON.parse(request.responseText);
+                        
+                        console.log(response);
+                        var position = {
+                            latitude: response.latitude,
+                            longitude: response.longitude
+                        };
+                        
+                        var cityName = response.city;
+                        var weatherSimpleDescription = response.weather.simple;
+                        var weatherDescription = response.weather.description;
+                        var weatherTemperature = response.weather.temperature;
+                        
+                        weatherData.temperatureValue = weatherTemperature;
+                        
+                        loadBackground(position.latitude, position.longitude, weatherSimpleDescription);
+                        
+                        weatherData.city.innerHTML = cityName;
+                        weatherData.weather.innerHTML = ", " + weatherDescription;
+                        weatherData.temperature.innerHTML = weatherTemperature + weatherData.units;
+                    }, false);
+                    request.addEventListener("error", function(err) {
+                        alert("Could not do the shit you asked for...");
+                    }, false);
+                    
+                    request.open("GET", "https://fourtonfish.com/tutorials/weather-web-app/getlocationandweather.php?owapikey=507b082bdb3c5d16a2f187d2668bfc8d&units=metric", true);
+                    request.send();
+                } else {
+                    alert("Unable to retrieve the location and weather data.");
+                }
+            }
+            
+            function loadBackground(lat, lon, weatherTag) {
+                var script_element = document.createElement('script');
+                
+                script_element.src = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=db1ee2c0f3f2f8c562e25f83a6d07a1d&lat=" + lat + "&lon=" + lon + "&accuracy=1&tags=" + weatherTag + "&sort=relevance&extras=url_l&format=json";
+                
+                document.getElementsByTagName('head')[0].appendChild(script_element);
+            }
+            
+            function jsonFlickrApi(data) {
+                if (data.photos.pages > 0) {
+                    // If there are pictures for our weather and location, we will show one of them.
+                    var photo = data.photos.photo[2];
+                    document.querySelector("body").style.backgroundImage = "url('" + photo.url_l + "')";
+                    document.querySelector("#image-source").setAttribute("href", "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id);
+                } else {
+                    //Otherwise let's load a generic background.
+                    alert("Couldn't load an image bro");
+                }
+            }
+            
+            getLocationAndWeather();
+        </script>
+    </body>
+</html>
