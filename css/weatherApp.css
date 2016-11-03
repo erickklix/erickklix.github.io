@@ -1,42 +1,46 @@
-body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  font-size: 2em;
-  text-shadow: 0 0 10px #000;
-  color: #fff;
-  background: #888;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+body {
+    background-color: #CDFCFF;
+    color: #4E7F82;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-section{
-  min-height: 100%;
+#center {
+    margin: auto;
+    width: 30%;
+    text-align: center;
+    margin-top: 10%;
+    background-color: aquamarine;
+    border-radius: 5%;
+    padding: 20px;
 }
 
-h1{
-  font-size: 2em;
-  padding: 0 0.3em;
-  line-height: 1em;
+h3 {
+    font-size: 30;
+    margin: 5;
 }
 
-p{
-  padding: 0 1em;
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
-a{
-  color: #fff;
+h1 {
+    font-size: 72px;
+    color: white;
+    margin: 0;
 }
 
-footer{
-  position: absolute;
-  bottom: 0;
-  font-size: 0.5em;
+#temp, #desc, #wind {
+    font-size: 40px;
+    color: white;
 }
 
-#temperature{
-  text-decoration: none;
-  border-bottom: 0.05em dotted white;
+#button {
+    cursor: hand;
+}
+
+hr {
+    margin: 20px 0;
 }

@@ -1,20 +1,18 @@
 <html lang="en">
     <head>
-        <title>Simple Weather API</title>
+        <title>Simple Weather App</title>
         <link rel="stylesheet" href="css/weatherApp.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>
-            
-        </script>
     </head>
     <body>
         <div id="forecast">
-            <h1>Weather at <span id="location"></span></h1>
-            <div id="imgdiv">
-                <img id="img" src="" />
-            </div>
-            <p>It is currently <span id="temp"></span>F with <span id="desc"></span></p>
+            <h1>The weather in <span id="location">THIS PLACE</span></h1>
+            <p>is currently <span id="temp">9000</span> F with <span id="desc">stuff</span></p>
             <p>Wind: <span id="wind"></span></p>
+            <h2>Weather Search: </h2>
+            State (KS) <input type="text" id="state"  size="2" maxlength="2"/></br>
+            City (Olathe) <input type="text" id="city"/>
+            <span id="button" onclick="getWeather();">Click Here</span>
         </div>
     </body>
     <script>
@@ -36,8 +34,17 @@
             }
             
             function getWeather(){
+                
                 var key = "c043d4759e8caed9";
-                var Weather = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + Geo.lat + "," + Geo.lng + ".json";
+                if ($(state).val() && $(city).val()){
+                    var Weather = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + $(state).val() + "/" + $(city).val() + ".json";
+                }else if(Geo.lat && Geo.lng){
+                    var Weather = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + Geo.lat + "," + Geo.lng + ".json";    
+                } else {
+                    alert ("Please enable your location or select a valid state and city.")
+                }
+                
+                
                 
                 $.ajax({
                     url : Weather,
@@ -52,9 +59,8 @@
                         
                         $('#location').html(location);
                         $('#temp').html(temp);
-                        $('desc').html(desc);
+                        $('#desc').html(desc);
                         $('#wind').html(wind);
-                        $('#img').attr('src', img);
                     }
                 });
                 
