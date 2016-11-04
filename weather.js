@@ -7,7 +7,7 @@ $(document).ready(function(){
     }
 
     function error(){
-        alert("We couldn't find you!");
+        alert("We couldn't find you! (or Chrome doesn't like that this page is from an insecure origin)");
     }
 
     function success(position){

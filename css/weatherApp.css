@@ -3,7 +3,7 @@
   width: 40%;
   text-align: center;
   margin-top: 10%;
-  background-color: aquamarine;
+  background-color: #B42525;
   border-radius: 5%;
   padding: 20px; }
   .w__app__heading {
@@ -16,8 +16,10 @@
   .w__app__btn {
     border-radius: 4px;
     background-color: white;
-    padding: 2px;
-    cursor: hand; }
+    padding: 4px;
+    cursor: hand;
+    width: 40%;
+    margin: auto; }
   .w__app__data {
     font-size: 40px;
     color: white; }
@@ -25,13 +27,16 @@
     margin: 20px 0; }
   .w__app__input {
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 20px;
     box-sizing: border-box;
     border-radius: 4px; }
 
 body {
-  background-color: #CDFCFF;
-  color: #4E7F82;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+  background-color: #404040;
+  color: #404040;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px; }
 
 /*# sourceMappingURL=weatherApp.css.map */
