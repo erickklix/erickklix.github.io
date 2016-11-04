@@ -4,7 +4,7 @@ body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-#center {
+.center {
     margin: auto;
     width: 30%;
     text-align: center;
@@ -12,6 +12,12 @@ body {
     background-color: aquamarine;
     border-radius: 5%;
     padding: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    color: white;
+    margin: 0;
 }
 
 h3 {
@@ -26,18 +32,12 @@ input {
     border-radius: 4px;
 }
 
-h1 {
-    font-size: 72px;
-    color: white;
-    margin: 0;
-}
-
-#temp, #desc, #wind {
+.temp, .desc, .wind {
     font-size: 40px;
     color: white;
 }
 
-#button {
+.btn {
     cursor: hand;
 }
 

@@ -38,16 +38,16 @@ $(document).ready(function(){
                 var desc = data['current_observation']['weather'];
                 var wind = data['current_observation']['wind_string'];
 
-                $('#location').html(location);
-                $('#temp').html(temp);
-                $('#desc').html(desc);
-                $('#wind').html(wind);
+                $('.location').html(location);
+                $('.temp').html(temp);
+                $('.desc').html(desc);
+                $('.wind').html(wind);
             }
         });
 
     }
     
-    $("#button").click(getWeather);
+    $(".btn").click(getWeather);
     
 });
 

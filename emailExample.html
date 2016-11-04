@@ -1,0 +1,419 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>More Capabilities for Developers with Connect IQ 2.1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if (gte mso 9)|(IE)]>
+  <style type="text/css">
+    table {border-collapse: collapse;}
+  </style>
+  <![endif]-->
+  <style>
+    body {margin:0!important;padding:0;background-color:#F6F6F6;}
+    table {border-spacing:0;font-family:sans-serif;color:#333333;}
+    table[class=background] {margin:0;padding:0;width:100%!important;line-height:100%!important;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+    td {padding:0;}
+    img {border:0;}
+    div[style*="margin:16px 0"] {margin:0!important;}
+    .container {margin:0 auto;width:100%;max-width:600px;}
+    .h1, .h2, .h3, .h4, .h5, .p, .cta .a {font-family:Helvetica,Arial,sans-serif;margin:0;color:#222222;}
+    .h1 {font-size:36px;font-weight:normal;line-height:43px;}
+    .h2 {font-size:28px;font-weight:200;line-height:34px;}
+    .h3 {font-size:21px;font-weight:200;line-height:25px;letter-spacing:0.02em;text-transform:uppercase;}
+    .h4 {font-size:18px;font-weight:600;line-height:22px;}
+    .h5 {font-size:18px;font-weight:200;line-height:22px;}
+    .p  {font-size:16px;font-weight:400;line-height:28px;color:#777777;}
+    .cta .a {font-size:20px;font-weight:400;line-height:28px;text-decoration:none;}
+    .cta .s {color:#222222;}
+    .cta .arr {font-family:'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif;font-size:22px;font-weight:700;display:inline;text-decoration:none;color:#222222;}
+    .sm-txt, .cta .sm-txt.a, .cta .sm-txt .arr {font-size:12px;line-height:16px;}
+    .rg-txt, .cta .rg-txt.a, .cta .rg-txt .arr {font-size:14px;line-height:24px;}
+    .lg-txt, .cta .lg-txt.a, .cta .lg-txt .arr {font-size:16px;line-height:28px;}
+    .left {text-align:left;}
+    .center {text-align:center;}
+    .right {text-align:right;}
+    .list .p:last-child {padding-bottom:8px;}
+    .prehead {padding-top:8px;padding-bottom:8px;}
+    .prehead .inner {margin:0 auto;width:100%;padding-left:16px;padding-right:16px;}
+    .prehead .style {font-family:Helvetica,Arial,sans-serif;color:#E1E4EA;}
+    .prehead .text {font-size:10px;text-align:left;}
+    .prehead .link {font-size:12px;text-align:right;font-weight:700;}
+    .prehead .link .a {text-decoration:none;color:#E1E4EA;}
+    .prehead .link .s {color:#E1E4EA;}
+    .head {background-color:#FFFFFF;border-bottom-style:solid;border-bottom-width:2px;border-bottom-color:#E1E4EA;}
+    .head .inner {margin:0 auto;width:100%;max-width:600px;padding-left:16px;}
+    .head .logo {padding-top:16px;padding-bottom:16px;}
+    .head .mrkt {font-family:Helvetica,Arial,sans-serif;font-weight:300;color:#E1E4EA;padding-top:4px;padding-right:16px;}
+    .head .mrkt .a {text-decoration:none;color:#E1E4EA;}
+    .head .mrkt .s {color:#E1E4EA;}
+    .head.alt {background-color:#4870C9;border-bottom-color:#254763;}
+    .head.alt .mrkt {background-color:#254763;color:#FFFFFF;}
+    .head.alt .mrkt .a,
+    .head.alt .mrkt .s {color:#FFFFFF;}
+    .foot {border-top-style:solid;border-top-width:2px;border-top-color:#BEBEBE;}
+    .foot .p {color:#999999}
+    .foot .inner {margin:0 auto;width:100%;max-width:600px;padding-left:16px;padding-right:16px;}
+    .foot .a,
+    .foot .s {color:#999999;}
+    .foot .social {margin:0 auto;}
+    .foot .social .icn {max-width:56px;}
+    .foot .social.brdr .icn {padding: 0 4px;}
+    .foot .social.brdr .icn:not(:last-child) {border-right-style:solid;border-right-width:1px;border-right-color:#DEDEDE;}
+    .foot a {color:#999999}
+    .img {width:100%;height:auto;}
+    .img-full {max-width:600px!important;}
+    .btn .border {padding-top:2px;padding-right:2px;padding-bottom:2px;padding-left:2px;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;background-color:#999999;background-clip:padding-box;}
+    .btn .fill {font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:300;padding-top:12px;padding-right:38px;padding-bottom:12px;padding-left:38px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom-right-radius:3px;border-bottom-left-radius:3px;text-align:center;background-clip:padding-box;}
+    .btn .a {color:#FFFFFF;font-weight:300;text-align:center;text-decoration:none;}
+    .btn .s {color:#FFFFFF;}
+    .btn.alt .fill {background-color: #FFFFFF;}
+    .btn.alt .a, .btn.alt .s {color:#858585;}
+    .discount .label {padding-top:8px;padding-bottom:8px;text-transform:uppercase;font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;color:#ffffff;text-align:center;}
+    .discount .code {padding-top:8px;padding-bottom:8px;font-size:26px;line-height:32px;font-family:monospace;color:#999999;text-align:center;}
+    .product .col:not(:last-child) {border-right-style:solid;border-right-width:1px;border-right-color:#DDDDDD;}
+    .product .link .a {font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:normal;margin:0;text-decoration:none;color:#979797;}
+    .product .link .s {font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:24px;margin:0;color:#979797;}
+    .product .link .s.sm-txt {font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:400;line-height:12px;margin:0;color:#979797;}
+    .here-maps .logo {padding-left:16px;padding-right:32px;}
+    .hr {padding-left:48px;padding-right:48px;}
+    .hr .inner {width:100%;max-width:600px;}
+    .hr .inner .border {border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#DDDDDD;}
+    .one-col, .here-maps {padding-left:16px;padding-right:16px;}
+    .two-col, .split-col, .three-col, .four-col {padding-left:4px;padding-right:4px;text-align:center;font-size:0;}
+    .product {text-align:center;font-size:0;}
+    .col, .side {width:100%;display:inline-block;vertical-align:top;text-align:center;}
+    .two-col .col {max-width:296px;}
+    .split-col .top {max-width:236px;}
+    .split-col .btm {max-width:356px;}
+    .three-col .col {max-width:197px;}
+    .three-col .mid {max-width:198px;}
+    .four-col .side {max-width:296px;}
+    .four-col .col {max-width:148px;}
+    .product .col {max-width:33%;}
+    .content {text-align:left;}
+    .col-inner {width:100%;padding-top:16px;padding-left:12px;padding-right:12px;}
+    .product .col-inner {padding-top:8px;padding-left:0px;padding-bottom:8px;padding-right:0px;}
+    .split-col.img-left  {text-align:left;padding-left:0;}
+    .split-col.img-right {text-align:right;padding-right:0;}
+    .split-col.img-left  .top .col-inner {padding-left:0;padding-right:8px;}
+    .split-col.img-right .top .col-inner {padding-right:0;padding-left:8px;}
+    .split-col.img-left  .btm,
+    .split-col.img-right .btm {max-width:360px;}
+    .split-col.img-left  .btm .col-inner {padding-left:16px;}
+    .split-col.img-right .btm .col-inner {padding-right:16px;}
+    @media only screen and (max-width:600px) {
+      .col {max-width:50%!important;}
+      .top {max-width:40%!important;}
+      .btm {max-width:60%!important;}
+      .three-col .col, .four-col .side {max-width:100%!important;}
+      .four-col .col {max-width:50%!important;}
+      .four-col.grid {padding:0 8px!important;}
+      .four-col.grid .col-inner {padding:0 8px!important;}
+      .four-col.grid .side:first-child {padding-bottom:16px!important;}
+      .product .col {max-width:33%!important;}
+    }
+    @media only screen and (max-width:480px) {
+      .head .logo {width:60%!important;}
+      .head .mrkt {width:40%!important;}
+      .h1 {font-size:24px!important;line-height:32px!important;}
+      .h2 {font-size:21px!important;line-height:28px!important;}
+      .h3 {font-size:18px!important;line-height:24px!important;}
+      .h4, .h5 {font-size:16px!important;line-height:21px!important;}
+      .p {font-size:14px!important;line-height:24px!important;}
+      .sm-txt, .cta .sm-txt.a, .cta .sm-txt .arr {font-size:12px!important;line-height:16px!important;}
+      .rg-txt, .cta .rg-txt.a, .cta .rg-txt .arr {font-size:14px!important;line-height:24px!important;}
+      .lg-txt, .cta .lg-txt.a, .cta .lg-txt .arr {font-size:16px!important;line-height:28px!important;}
+      .two-col, .three-col, .split-col {padding-left:0!important;padding-right:0!important;}
+      .col, .top, .btm {max-width:100%!important;}
+      .col-inner {padding-left:16px!important;padding-right:16px!important;}
+      .product .link .a,
+      .product .link .s {font-size:13px!important;line-height:24px!important;}
+      .product .link .s.sm-txt {font-size:11px!important;line-height:11px!important;}
+      .img-left  .top .col-inner {padding-left:0!important;padding-right:16px!important;}
+      .img-right .top .col-inner {padding-left:16px!important;padding-right:0!important;}
+      .no-mobile, .img-left .no-mobile, .img-right .no-mobile {padding-left:0!important;padding-right:0!important;}
+    }
+  </style>
+</head>
+<body style="padding: 0;background-color: #F6F6F6;margin: 0!important;">
+  <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="background prehead" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;padding-top: 8px;padding-bottom: 8px;">
+    <tr>
+      <td style="padding: 0;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="inner" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;margin: 0 auto;width: 100%;padding-left: 16px;padding-right: 16px;">
+          <tr>
+            <td width="450" align="left" valign="middle" class="style text" style="padding: 0;font-family: Helvetica,Arial,sans-serif;color: #E1E4EA;font-size: 10px;text-align: left;">
+              Download the SDK Preview Now
+            </td>
+            <td width="150" align="right" valign="middle" class="style link" style="padding: 0;font-family: Helvetica,Arial,sans-serif;color: #E1E4EA;font-size: 12px;text-align: right;font-weight: 700;">
+              <a href="#" class="a" style="text-decoration: none;color: #E1E4EA;"><span class="s" style="color: #E1E4EA;">View Online</span></a>
+            </td>
+          </tr>
+       </table>
+      </td>
+    </tr>
+ </table>
+
+  <table bgcolor="" border="0" cellpadding="0" cellspacing="0" class="background head" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;background-color: #FFFFFF;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #E1E4EA;">
+    <tr>
+      <td style="padding: 0;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+        <tr>
+        <td>
+        <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="inner" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;margin: 0 auto;width: 100%;max-width: 600px;padding-left: 16px;">
+          <tr>
+            <td align="left" class="logo" valign="middle" width="450" style="padding: 0;padding-top: 16px;padding-bottom: 16px;">
+              <a href="#" target="_blank">
+                <img width="71" border="0" height="21" alt="Garmin" src="http://static.garmin.com/shared/email/_ecrm-assets/logo/logo-gray-1x.png" style="border: 0;">
+              </a>
+            </td>
+          </tr> 
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+      </td>
+    </tr>
+  </table>
+
+  <table width="100%" bgcolor="#F6F6F6" border="0" cellpadding="0" cellspacing="0" class="background" style="border-spacing: 0;font-family: sans-serif;color: #333333;margin: 0;padding: 0;table-layout: fixed;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;width: 100%!important;line-height: 100%!important;">
+    <tr>
+      <td style="padding: 0;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+        <tr>
+        <td>
+        <![endif]-->
+        <table align="center" bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" class="container" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;margin: 0 auto;width: 100%;max-width: 600px;">
+          <tr>
+            <td align="center" style="padding: 0;">
+              <a href="http://developer.garmin.com/" target="_blank">
+                <img alt="" border="0" class="img" src="https://static.garmin.com/shared/email/2016/06-jun/ciq-dev/hero.jpg" style="max-width: 600px;border: 0;width: 100%;height: auto;" width="600">
+              </a>
+            </td>
+          </tr>
+          <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+          <tr> 
+            <td class="one-col" style="padding: 0;padding-left: 16px;padding-right: 16px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                <tr>
+                  <td class="h1 center" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #222222;font-size: 36px;font-weight: normal;line-height: 43px;text-align: center;">
+                    More Possibilities for Your<br>Apps and Widgets
+                  </td>
+                </tr>
+                <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr>
+                  <td class="p" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                    Garmin recently set a new record with its 10 millionth Connect IQ™ app download alongside the release of our newest running watch, Forerunner<sup style="line-height:1em; font-size:0.6em;">&reg;</sup> 735XT. Boasting multisport features and wrist-based heart rate&sup1;, this new Forerunner offers more for developers to work with. So, there’s plenty of opportunity to get creative with custom watch faces, data fields, and widgets that help inspire runners to “Beat Yesterday.”
+                  </td>
+                </tr>
+                <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr>
+                  <td class="p" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                    We’re grateful to our growing family of third-party developers for helping us reach this historic milestone, and we’re excited to continue improving for our customers by rolling out Connect IQ 2.1. Chock-full of new capabilities for developers and consumers alike, it’s launching to developers in beta right now and will be available to the public in late July. So start thinking about what you’d like to create, and read on to find out what you can do with this update.
+                  </td>
+                </tr>
+                <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr> 
+                  <td class="btn" style="padding: 0;">
+                    <table align="center" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                      <tr> 
+                        <td width="auto" align="center" valign="middle" class="border" style="padding: 0;padding-top: 2px;padding-right: 2px;padding-bottom: 2px;padding-left: 2px;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;background-color: #999999;background-clip: padding-box;">
+                          <table align="center" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                            <tr> 
+                              <td width="auto" align="center" valign="middle" class="fill" style="padding: 0;font-family: Helvetica,Arial,sans-serif;font-size: 16px;font-weight: 300;padding-top: 12px;padding-right: 38px;padding-bottom: 12px;padding-left: 38px;border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;text-align: center;background-clip: padding-box;">
+                                <a href="http://developer.garmin.com" class="a" target="_blank" style="color: #FFFFFF;font-weight: 300;text-align: center;text-decoration: none;"><span class="s" style="color: #FFFFFF;">Learn More</span></a>
+                              </td> 
+                            </tr>
+                          </table> 
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+          <tr><td bgcolor="#f6f6f6" height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+          <tr>
+            <td align="center" style="padding: 0;">
+              <a href="#" target="_blank">
+                <img alt="" border="0" class="img" src="https://static.garmin.com/shared/email/2016/06-jun/ciq-dev/item-02.jpg" style="max-width: 600px;border: 0;width: 100%;height: auto;" width="600">
+              </a>
+            </td>
+          </tr>
+          <tr> 
+            <td class="one-col" style="padding: 0;padding-left: 16px;padding-right: 16px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr>
+                  <td class="h2 center" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #222222;font-size: 28px;font-weight: 200;line-height: 34px;text-align: center;">
+                    The Next Generation of Connect IQ
+                  </td>
+                </tr>
+                <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr>
+                  <td class="p" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                    We designed Connect IQ 2.1 with the goal of giving developers even more ways to let their creativity flow when coming up with the next great app for Garmin devices. The new version contains:
+                  </td>
+                </tr>
+                <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr> 
+                  <td style="padding: 0;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;">    
+                      <tr> 
+                        <td class="p [class]" width="24" align="left" valign="top" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          &nbsp;&bull;
+                        </td>
+                        <td class="p [class]" align="left" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          Widget and app support for Edge<sup style="line-height:1em; font-size:0.6em;">&reg;</sup> bike computers: expand your creations to the Garmin line of cycling computers
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td class="p [class]" width="24" align="left" valign="top" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          &nbsp;&bull;
+                        </td>
+                        <td class="p [class]" align="left" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          FIT recording: lets your metrics be displayed on Garmin Connect™, our online fitness community
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td class="p [class]" width="24" align="left" valign="top" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          &nbsp;&bull;
+                        </td>
+                        <td class="p [class]" align="left" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          New web APIs: allows your apps to communicate with authenticated web services
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td class="p [class]" width="24" align="left" valign="top" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          &nbsp;&bull;
+                        </td>
+                        <td class="p [class]" align="left" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                          Much more!
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr> 
+                  <td class="btn alt" style="padding: 0;">
+                    <table align="center" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                      <tr> 
+                        <td width="auto" align="center" valign="middle" class="border" style="padding: 0;padding-top: 2px;padding-right: 2px;padding-bottom: 2px;padding-left: 2px;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;background-color: #999999;background-clip: padding-box;">
+                          <table align="center" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                            <tr> 
+                              <td width="auto" align="center" valign="middle" class="fill" style="padding: 0;font-family: Helvetica,Arial,sans-serif;font-size: 16px;font-weight: 300;padding-top: 12px;padding-right: 38px;padding-bottom: 12px;padding-left: 38px;border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;text-align: center;background-clip: padding-box;background-color: #FFFFFF;">
+                                <a href="http://developer.garmin.com/index.php/blog/post/connect-iq-2-biker-monkey/" class="a" target="_blank" style="color: #858585;font-weight: 300;text-align: center;text-decoration: none;"><span class="s" style="color: #858585;">Learn More</span></a>
+                              </td> 
+                            </tr>
+                          </table> 
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td bgcolor="#f6f6f6" height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+          <tr> 
+            <td class="one-col" style="padding: 0;padding-left: 16px;padding-right: 16px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr>
+                  <td class="h2 center" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #222222;font-size: 28px;font-weight: 200;line-height: 34px;text-align: center;">
+                    Get Started Today
+                  </td>
+                </tr>
+                <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr>
+                  <td class="p" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #777777;font-size: 16px;font-weight: 400;line-height: 28px;">
+                    Download the Connect IQ 2.1 SDK preview to get the basic toolset you need to create one of the very first apps with these brand new capabilities.
+                  </td>
+                </tr>
+                <tr><td height="16" style="font-size: 16px;line-height: 16px;padding: 0;" width="100%">&nbsp;</td></tr>
+                <tr> 
+                  <td class="btn" style="padding: 0;">
+                    <table align="center" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                      <tr> 
+                        <td width="auto" align="center" valign="middle" class="border" style="padding: 0;padding-top: 2px;padding-right: 2px;padding-bottom: 2px;padding-left: 2px;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;background-color: #999999;background-clip: padding-box;">
+                          <table align="center" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;font-family: sans-serif;color: #333333;">
+                            <tr> 
+                              <td width="auto" align="center" valign="middle" class="fill" style="padding: 0;font-family: Helvetica,Arial,sans-serif;font-size: 16px;font-weight: 300;padding-top: 12px;padding-right: 38px;padding-bottom: 12px;padding-left: 38px;border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;text-align: center;background-clip: padding-box;">
+                                <a href=" http://developer.garmin.com/connect-iq/sdk/" class="a" target="_blank" style="color: #FFFFFF;font-weight: 300;text-align: center;text-decoration: none;"><span class="s" style="color: #FFFFFF;">Download the SDK</span></a>
+                              </td> 
+                            </tr>
+                          </table> 
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding: 0;">
+              <a href="http://developer.garmin.com/" target="_blank">
+                <img alt="" border="0" class="img" src="https://static.garmin.com/shared/email/2016/06-jun/ciq-dev/footer.jpg" style="max-width: 600px;border: 0;width: 100%;height: auto;" width="600">
+              </a>
+            </td>
+          </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+      </td>
+    </tr>
+  </table>
+
+  <table bgcolor="#F6F6F6" border="0" cellpadding="0" cellspacing="0" width="100%" class="background foot" style="border-spacing: 0;font-family: sans-serif;color: #333333;border-top-style: solid;border-top-width: 2px;border-top-color: #BEBEBE;">
+    <tr>
+      <td style="padding: 0;">
+      <!--[if (gte mso 9)|(IE)]>
+      <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+      <tr>
+      <td>
+      <![endif]-->
+        <table align="center" border="0" cellspacing="0" cellpadding="0" class="inner" width="100%" style="border-spacing: 0;font-family: sans-serif;color: #333333;margin: 0 auto;width: 100%;max-width: 600px;padding-left: 16px;padding-right: 16px;">
+          
+          <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+
+          <tr>
+            <td align="left" valign="middle" class="p sm-txt" style="padding: 0;font-family: Helvetica,Arial,sans-serif;margin: 0;color: #999999;font-size: 12px;font-weight: 400;line-height: 16px;">
+              &sup1;See <a class="a" href="http://www.garmin.com/ataccuracy" target="_blank" style="color: #999999;"><span class="s" style="color: #999999;">Garmin.com/ataccuracy</span></a> 
+              <br><br>
+              Garmin respects your right to privacy. To learn more, please review our <a class="a" target="_blank" href="link" style="color: #999999;"><span class="s" style="color: #999999;">Privacy Policy</span></a>. This email is an advertisement. If you no longer wish to receive Garmin promotional emails, you can <a class="a" target="_blank" href="link" style="color: #999999;"><span class="s" style="color: #999999;">unsubscribe</span></a> at any time.
+              <br><br>
+              Please do not reply to this message. It was sent from a notification-only address that cannot accept incoming email. Find contact information on our <a class="a" target="_blank" href="link" style="color: #999999;"><span class="s" style="color: #999999;">Contact Us</span></a> page.
+              <br><br>
+              © 2016 Garmin Ltd. or its subsidiaries. All rights reserved. Garmin International, 1200 E. 151st Street, Olathe, KS 66062
+            </td>
+          </tr>
+
+          <tr><td height="24" style="font-size: 24px;line-height: 24px;padding: 0;" width="100%">&nbsp;</td></tr>
+            
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
