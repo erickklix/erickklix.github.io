@@ -6,23 +6,19 @@
         <script src="weather.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="center">
-                <div class="centerBackground">
-                    <h3>Weather Search</h3>
-                    <div>
-                        State <input type="text" id="state"  size="2" maxlength="2"/>
-                        City <input type="text" id="city"/>
-                    </div>
-                    <span class="btn">Show Me the Weather</span>
-                    <hr>
-                    <h3>the weather in</h3>
-                    <h1><span class="location">THIS PLACE</span></h1>
-                    <p>is currently </p>
-                    <span class="temp">9000</span> &ordm;F with <span class="desc">stuff</span> skies</p>
-                    <p>Wind: <span class="wind"></span></p>
-                </div>
+        <div class="w__app">
+            <h3 class="w__app__heading">Weather Search</h3>
+            <div>
+                State <input type="text" id="js__w__data__state" class="w__app__input" size="2" maxlength="2"/>
+                City <input type="text" id="js__w__data__city" class="w__app__input"/>
             </div>
+            <span id="js__w__app__btn" class="w__app__btn">Show Me the Weather</span>
+            <hr class="w__app__extra-margin">
+            <h3 class="w__app__heading">the weather in</h3>
+            <h1 id="js__w__data__location" class="w__app__large-heading">THIS PLACE</h1>
+            <p>is currently </p>
+            <span id="js__w__data__temp" class="w__app__data">9000</span> &ordm;F with <span id="js__w__data__desc" class="w__app__data">aight</span> skies</p>
+            <p>Wind: <span id="js__w__data__wind" class="w__app__data"></span></p>
         </div>
     </body>
 </html>

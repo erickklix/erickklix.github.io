@@ -1,46 +1,37 @@
-body {
-    background-color: #CDFCFF;
-    color: #4E7F82;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-.center {
-    margin: auto;
-    width: 30%;
-    text-align: center;
-    margin-top: 10%;
-    background-color: aquamarine;
-    border-radius: 5%;
-    padding: 20px;
-}
-
-h1 {
+.w__app {
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  margin-top: 10%;
+  background-color: aquamarine;
+  border-radius: 5%;
+  padding: 20px; }
+  .w__app__heading {
+    font-size: 30px;
+    margin: 5px; }
+  .w__app__large-heading {
     font-size: 72px;
     color: white;
-    margin: 0;
-}
-
-h3 {
-    font-size: 30;
-    margin: 5;
-}
-
-input {
+    margin: 0; }
+  .w__app__btn {
+    border-radius: 4px;
+    background-color: white;
+    padding: 2px;
+    cursor: hand; }
+  .w__app__data {
+    font-size: 40px;
+    color: white; }
+  .w__app__extra-margin {
+    margin: 20px 0; }
+  .w__app__input {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border-radius: 4px;
-}
+    border-radius: 4px; }
 
-.temp, .desc, .wind {
-    font-size: 40px;
-    color: white;
-}
+body {
+  background-color: #CDFCFF;
+  color: #4E7F82;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-.btn {
-    cursor: hand;
-}
-
-hr {
-    margin: 20px 0;
-}
+/*# sourceMappingURL=weatherApp.css.map */

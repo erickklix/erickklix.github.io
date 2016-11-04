@@ -19,8 +19,11 @@ $(document).ready(function(){
     function getWeather(){
 
         var key = "c043d4759e8caed9";
-        if ($(state).val() && $(city).val()){
-            var Weather = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + $(state).val() + "/" + $(city).val() + ".json";
+        var state = $("#js__w__data__state");
+        var city = $("#js__w__data__city");
+        
+        if (state.val() && city.val()){
+            var Weather = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + state.val() + "/" + city.val() + ".json";
         }else if(Geo.lat && Geo.lng){
             var Weather = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + Geo.lat + "," + Geo.lng + ".json";    
         } else {
@@ -31,23 +34,22 @@ $(document).ready(function(){
             url : Weather,
             dataType : "jsonp",
             success : function(data){
-                console.log(data);
                 var location = data['location']['city'];
                 var temp = data['current_observation']['temp_f'];
                 var img = data['current_observation']['icon_url'];
                 var desc = data['current_observation']['weather'];
                 var wind = data['current_observation']['wind_string'];
 
-                $('.location').html(location);
-                $('.temp').html(temp);
-                $('.desc').html(desc);
-                $('.wind').html(wind);
+                $('#js__w__data__location').html(location);
+                $('#js__w__data__temp').html(temp);
+                $('#js__w__data__desc').html(desc);
+                $('#js__w__data__wind').html(wind);
             }
         });
 
     }
     
-    $(".btn").click(getWeather);
+    $("#js__w__app__btn").click(getWeather);
     
 });
 

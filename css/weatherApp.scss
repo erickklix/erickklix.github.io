@@ -1,0 +1,50 @@
+
+.w__app {
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    margin-top: 10%;
+    background-color: aquamarine;
+    border-radius: 5%;
+    padding: 20px;
+    
+    &__heading {
+        font-size: 30px;
+        margin: 5px;
+    }
+    
+    &__large-heading {
+        font-size: 72px;
+        color: white;
+        margin: 0;
+    }
+    
+    &__btn {
+        border-radius: 4px;
+        background-color: white;
+        padding: 2px;
+        cursor: hand;
+    }
+    
+    &__data {
+        font-size: 40px;
+        color: white;
+    }
+    
+    &__extra-margin{
+        margin: 20px 0;
+    }
+    &__input{
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+}
+
+body {
+    background-color: #CDFCFF;
+    color: #4E7F82;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
